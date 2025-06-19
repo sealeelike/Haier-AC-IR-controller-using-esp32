@@ -20,7 +20,7 @@
 
 ## 探索过程概述
 - 无头苍蝇
-  - 我将[动机](https://github.com/sealeelike/Haier-AC-IR-controller-using-esp32/blob/main/README.md#%E8%83%8C%E6%99%AF)部分输入gemini2.5pro，得到指导，上某宝购买了一些零件
+  - 我将[背景](https://github.com/sealeelike/Haier-AC-IR-controller-using-esp32/blob/main/README.md#%E8%83%8C%E6%99%AF)部分输入gemini2.5pro，得到指导，上某宝购买了一些零件
   - 我将买到的零件列表（包括参数）输入2.5pro。他给出了硬件连接建议，并建议我使用ArduinoIDE。
   - 学习烧录程序，每次都要按着板子上的boot按钮，很不方便。运行程序要按EN按钮
   - 开启“grounding with google”以后，2.5pro 持续给我输出已经404的红外指令库，让我很苦恼
