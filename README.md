@@ -50,7 +50,7 @@
 
 ## 细节实现与代码
 ### 首先连接硬件
-参见[hardware list](Hardware Check/hardware list.md)
+参见[硬件清单](Hardware-Check/hardware-list.md)
 
 ## 希望探讨的问题
 目前我卡在两个地方
