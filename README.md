@@ -55,6 +55,7 @@
 #### 检查功能
 电脑上用Thonny在esp32上烧录好micropython环境后，运行硬件检测程序。
 分别检查[屏幕](Hardware%20Check/screen%20test.py),[红外接收器](Hardware%20Check/IR_Receiver.py)。其中屏幕需要[sh1106驱动](Hardware%20Check/sh1106.py)
+
 红外发射器模块，指示灯可亮，但是实际上空调没反应，不知道哪里出了问题。
 
 
@@ -83,6 +84,7 @@
 
 ## 贡献方式
 虚心求教，欢迎各类与项目相关的批评，渴望大神指点
+
 欢迎大家提出建议、反馈或提交 Pull Request。
 
 ## 许可证
