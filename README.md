@@ -81,11 +81,22 @@
 >
 > 最终，[这个程序](IR%20learn/attemp%20decode/decode.ipynb)可以读取同一指令的不同红外信号，经过对比，得出最合理（共识）的二进制代码，再得到16进制代码。
 >
-> 当然，这个ipynb脚本用于调试，还有一键解码的[完整python脚本](IR%20learn/attemp%20decode/decode.py)。
+> 当然，这个ipynb脚本用于调试，还有一键解码的[完整python脚本](IR%20learn/attemp%20decode/decode.py)，运行结果就像[这样](IR%20learn/attemp%20decode/result)。
 >
 > 但是，这个解码脚本引入了一些像panda的库，不适用于micropython。而且需要手动导入脉冲信号，使用不方便。
 
+现在，我做了[一条龙脚本](one_dragon/opt_specification.py)，在esp32上运行，实现以下功能：
+- 用户输入模式参数。 终端提示开始学习，显示时间进度，用户发射信号。
+- esp对同一信号学习6次，得到6组信号。
+- 终端提示开始解码，esp解码，仅输出16进制，相关数据生成csv保存在esp根目录。
+- 无法解出提示报错
 
+最后我获得了[数据](one_dragon/cut-hex-room/more%20code.csv)
+> 这个[脚本](one_dragon/cut-hex-room/cut-hex.py)用于切割字节
+
+这个[表格](guess.csv)附上了我的猜测
+
+······施工中······
 
 ## 希望探讨的问题
 目前我卡在两个地方
