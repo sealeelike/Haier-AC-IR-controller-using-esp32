@@ -57,7 +57,16 @@
 分别检查[屏幕](Hardware%20Check/screen%20test.py),[红外接收器](Hardware%20Check/IR_Receiver.py)。其中屏幕需要[sh1106驱动](Hardware%20Check/sh1106.py)
 
 红外发射器模块，指示灯可亮，但是实际上空调没反应，不知道哪里出了问题。
+### 解码红外信号
+#### 获得脉冲信号
+接下来尝试获得红外信号。使用[这个](IR%20learn/IR_learn.py)，同一信号对接收器发射三次，程序会给出三次的脉冲信号。
+_单次学习可容纳999次脉冲，这是考虑到：有些遥控器（电视机）可以连发同一信号，来提升成功率。我的空调遥控器只会发送一次_
 
+现在我对 27°/26°+开/关 共四种信号分别学习了6次，得到[原始的脉冲信号](IR%learn/rawdata)。
+
+文件夹里的[blank file gen](IR%20learn/rawdata/blank%20file%20gen.py)是我调试时，用于生成一堆文件名带有参数的txt空文件。
+
+最内层文件夹里的[decode.py](IR%20learn/rawdata/27pwon/decode.py)是我调试后期做的解码脚本，后面会提到
 
 ## 希望探讨的问题
 目前我卡在两个地方
