@@ -49,8 +49,13 @@
 ······工作中······
 
 ## 细节实现与代码
-### 首先连接硬件
-参见[硬件清单](Hardware-Check/hardware-list.md)
+### 配置硬件
+#### 首先连接硬件
+参见[硬件清单](Hardware-Check/hardware-list.md)和[硬件连接](Hardware-Check/Hardware-Hookup.py)
+#### 检查功能
+电脑上用Thonny在esp32上烧录好micropython环境后，运行硬件检测程序。
+分别检查[屏幕](Hardware-Check/screen-test.py),[红外接收器](Hardware-Check/IR_Receiver.py)
+
 
 ## 希望探讨的问题
 目前我卡在两个地方
