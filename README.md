@@ -218,7 +218,7 @@
 
 下方这个图片附上了我的猜测，详细信息移步[表格](guess.csv)。
 
-![](screenshot/guess.png)
+![](screenshot/gguess.png)
 
 ······施工中······
 
