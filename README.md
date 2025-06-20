@@ -216,7 +216,7 @@
 最后我获得了[数据](one_dragon/cut-hex-room/more%20code.csv)
 > 这个[脚本](one_dragon/cut-hex-room/cut-hex.py)用于切割字节
 
-下方这个图片附上了我的猜测，详细信息移步[表格](guess.csv)。
+下方这个图片是我的猜测，详细信息移步[表格](guess.csv)。
 
 ![](screenshot/gguess.png)
 
