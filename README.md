@@ -179,6 +179,7 @@
 >     </tr>
 >   </tbody>
 > </table>
+>
 > 如果能把时间作为y轴，信号数作为x轴，画一个折线图，就可以更直观地看出每组信号代表的含义。于是，我做了[这个](I%20learn/attemp%20decode/graph.ipynb)脚本，用于画图，比如：[这](IR%20learn/attemp%20decode/26pwoff.png)是26°关机的脉冲图。
 >
 > ![](IR%20learn/attemp%20decode/26pwoff.png)
@@ -187,7 +188,7 @@
 >
 > 由于器械测量有误差，有一些反常数值，应该抛弃。
 >
-> 最终，[这个程序](IR%20learn/attemp%20decode/decode.ipynb)可以读取同一指令的不同红外信号，经过对比，得出最合理（共识）的二进制代码，再得到16进制代码。
+> 最终，[这个程序](IR%20learn/attemp%20decode/decode.py)可以读取同一指令的不同红外信号，经过对比，得出最合理（共识）的二进制代码，再得到16进制代码。
 >
 > 当然，这个ipynb脚本用于调试，还有一键解码的[完整python脚本](IR%20learn/attemp%20decode/decode.py)，也就是上文提到的decode.py，运行结果就像[这样](IR%20learn/attemp%20decode/result)。
 >
