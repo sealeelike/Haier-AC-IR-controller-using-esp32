@@ -74,8 +74,111 @@
 > _最内层文件夹里的[decode.py](IR%20learn/rawdata/27pwon/decode.py)是我调试后期做的解码脚本，后面会提到。_
 >
 > #### 解码脉冲信号
-> 现在，我了解到，脉冲里的"n,n,···，n,n" 代表 "有信号时间，无信号时间，······有信号时间，无信号时间"。这些脉冲时间两两一组，可能代表不同含义。
+> 现在，我了解到，脉冲里的"n,n,···，n,n" 代表 "有信号时间，无信号时间，······有信号时间，无信号时间"。这些脉冲时间两两一组，可能代表不同含义。比如下表：
 >
+> <table border="1" cellspacing="0" cellpadding="5" style="text-align: center; border-collapse: collapse; font-family: sans-serif;">
+>   <tbody>
+>     <tr>
+>       <th style="text-align: left; background-color: #f2f2f2;">pulse</th>
+>       <td>2946</td>
+>       <td>3056</td>
+>       <td>3074</td>
+>       <td>4423</td>
+>       <td>550</td>
+>       <td>1647</td>
+>       <td>544</td>
+>       <td>565</td>
+>       <td>545</td>
+>       <td>1649</td>
+>       <td>544</td>
+>       <td>561</td>
+>       <td>573</td>
+>       <td>539</td>
+>       <td>470</td>
+>       <td>1719</td>
+>       <td>546</td>
+>       <td>1648</td>
+>       <td>570</td>
+>       <td>526</td>
+>       <td>474</td>
+>       <td>1732</td>
+>       <td>569</td>
+>       <td>543</td>
+>       <td>476</td>
+>       <td>1714</td>
+>       <td>542</td>
+>       <td>570</td>
+>     </tr>
+>     <tr>
+>       <th style="text-align: left; background-color: #f2f2f2;">signal</th>
+>       <td>yse</td>
+>       <td>no</td>
+>       <td>yes</td>
+>       <td>no</td>
+>       <td>yse</td>
+>       <td>no</td>
+>       <td>yes</td>
+>       <td>no</td>
+>       <td>yes</td>
+>       <td>no</td>
+>       <td colspan="18">&...</td>
+>     </tr>
+>     <tr>
+>       <th style="text-align: left; background-color: #f2f2f2;">grouping</th>
+>       <td colspan="2">Two by two</td>
+>       <td colspan="2">Two by two</td>
+>       <td colspan="2">Two by two</td>
+>       <td colspan="2">Two by two</td>
+>       <td colspan="2">Two by two</td>
+>       <td colspan="18">&...</td>
+>     </tr>
+>     <tr>
+>       <th style="text-align: left; background-color: #f2f2f2;">unit time(T=500)</th>
+>       <td>6</td>
+>       <td>6</td>
+>       <td>6</td>
+>       <td>9</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>1</td>
+>       <td>3</td>
+>       <td>1</td>
+>       <td>1</td>
+>     </tr>
+>     <tr>
+>       <th style="text-align: left; background-color: #f2f2f2;">Binary meaning</th>
+>       <td colspan="4">header</td>
+>       <td colspan="2">1</td>
+>       <td colspan="2">0</td>
+>       <td colspan="2">1</td>
+>       <td colspan="2">0</td>
+>       <td colspan="2">0</td>
+>       <td colspan="2">1</td>
+>       <td colspan="2">1</td>
+>       <td colspan="2">0</td>
+>       <td colspan="2">1</td>
+>       <td colspan="6">&...</td>
+>     </tr>
+>   </tbody>
+> </table>
 > 如果能把时间作为y轴，信号数作为x轴，画一个折线图，就可以更直观地看出每组信号代表的含义。于是，我做了[这个](I%20learn/attemp%20decode/graph.ipynb)脚本，用于画图，比如：[这](IR%20learn/attemp%20decode/26pwoff.png)是26°关机的脉冲图。
 >
 > ![](IR%20learn/attemp%20decode/26pwoff.png)
