@@ -1,4 +1,5 @@
-,,,,,,,,brand code?,"bit1=T-16,bit2=machine command{0=off,2=cooling module,A=heating module}",,,"mode,00=off/40=cool/C0=hot","fanspeed,A0=auto/60=low/40=mid/20=high",,"mode:cool=20,hot=80",,,,,"modification,Tup=00/Tdw=01/speed=04/null=05{?}",,,
+config,,,,,,,,guess,,,,,,,,,,,,,,,
+,,,,,,,,brand code?,"left=T-16,right=machine command{0=off,2=cooling module,A=heating module}",,,"mode,00=off/40=cool/C0=hot","fanspeed,A0=auto/60=low/40=mid/20=high",,"mode:cool=20,hot=80",,,,,"modification,Tup=00/Tdw=01/speed=04/null=05{?}",,,
 type(switch=1/modify=2),power(on=1/off=2),mode,aux_heat,fan_speed,temperature,swing,specification,Byte0,Byte1,Byte2,Byte3,Byte4,Byte5,Byte6,Byte7,Byte8,Byte9,Byte10,Byte11,Byte12,Byte13,hex_code,timestamp
 2,1,2,2,1,27,1,26 to 27,A6,B2,00,00,40,60,00,20,00,00,00,00,00,18,A6B2000040600020000000000018,6/18/2025 11:50
 2,1,2,2,1,26,1,25 to 26,A6,A2,00,00,40,60,00,20,00,00,00,00,00,08,A6A2000040600020000000000008,6/18/2025 12:47
