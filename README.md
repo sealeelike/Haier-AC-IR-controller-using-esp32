@@ -68,22 +68,24 @@
 >
 >  _文件夹里的[blank file gen](IR%20learn/rawdata/blank%20file%20gen.py)是我调试时，用于生成一堆文件名带有参数的txt空文件。_
 >
-> _最内层文件夹里的[decode.py](IR%20learn/rawdata/27pwon/decode.py)是我调试后期做的解码脚本，后面会提到_
+> _最内层文件夹里的[decode.py](IR%20learn/rawdata/27pwon/decode.py)是我调试后期做的解码脚本，后面会提到。_
 >
 > #### 解码脉冲信号
 > 现在，我了解到，脉冲里的"n,n,···，n,n" 代表 "有信号时间，无信号时间，······有信号时间，无信号时间"。这些脉冲时间两两一组，可能代表不同含义。
 >
 > 如果能把时间作为y轴，信号数作为x轴，画一个折线图，就可以更直观地看出每组信号代表的含义。于是，我做了[这个](I%20learn/attemp%20decode/graph.ipynb)脚本，用于画图，比如：[这](IR%20learn/attemp%20decode/26pwoff.png)是26°关机的脉冲图。
 >
-> 仔细端详图片，我认为开头那4个尖是包头 _用于和空调握手_，不管。后面的数据里1500-1900的代表1，400到700的代表0。
+> ![](IR%20learn/attemp%20decode/26pwoff.png)
+>
+> 仔细端详图片，我认为开头那4个异常高的是包头 _用于和空调握手_，不用管。后面的数据里1500-1900的代表1，400到700的代表0。
 >
 > 由于器械测量有误差，有一些反常数值，应该抛弃。
 >
 > 最终，[这个程序](IR%20learn/attemp%20decode/decode.ipynb)可以读取同一指令的不同红外信号，经过对比，得出最合理（共识）的二进制代码，再得到16进制代码。
 >
-> 当然，这个ipynb脚本用于调试，还有一键解码的[完整python脚本](IR%20learn/attemp%20decode/decode.py)，运行结果就像[这样](IR%20learn/attemp%20decode/result)。
+> 当然，这个ipynb脚本用于调试，还有一键解码的[完整python脚本](IR%20learn/attemp%20decode/decode.py)，也就是上文提到的decode.py，运行结果就像[这样](IR%20learn/attemp%20decode/result)。
 >
-> 但是，这个解码脚本引入了一些像panda的库，不适用于micropython。而且需要手动导入脉冲信号，使用不方便。
+> 但是，这个解码脚本引入了一些像panda的库，不适用于micropython。另外他还需要手动导入脉冲信号，使用不方便。
 
 现在，我做了[一条龙脚本](one_dragon/opt_specification.py)，在esp32上运行，实现以下功能：
 - 用户输入模式参数。 终端提示开始学习，显示时间进度，用户发射信号。
