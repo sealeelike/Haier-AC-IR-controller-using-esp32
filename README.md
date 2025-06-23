@@ -2,6 +2,24 @@
 
 ## Adding an extra infrared module to old air conditioners to realize IoT/旧空调加装红外模块实现物联网
 
+## 目录
+_本branch用于调试，开发。完整app移步[此branch](https://github.com/sealeelike/Haier-AC-IR-controller-using-esp32.git)_
+
+[项目背景](#背景)
+
+[个人实力](#个人实力)
+
+[探索过程概述](#探索过程概述)
+
+[细节实现与代码](#细节实现与代码)
+
+[希望探讨的问题](#希望探讨的问题)
+
+[TODO List](#TODO%20List)
+
+[贡献方式](#贡献方式)
+
+[Licence](#许可证)
 
 ## 背景
 我的老式空调只有红外遥控功能，无物联网功能。
