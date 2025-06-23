@@ -98,6 +98,18 @@ while True:
 
 ---
 
+## 关键变量
+
+| 行为                  | 变量名                                                    |
+| ------------------------- | ----------------------------------------------------------- |
+| 修改 AP 名/密码          | `wifi_manager.start_ap()`                                   |
+| 增加网页字段 / 样式       | `config_server._page_index()`                               |
+| OLED/LED 显示逻辑         | `display_manager.py` 或 `ScreenUI`                         |
+| 看门狗判定时长            | `wifi_manager.watchdog()` `time.ticks_diff(...) > 15000`    |
+| 存多用户字段（MQTT、API） | `wifi_manager.save()` 的 JSON 结构                          |
+
+---
+
 
 ## 终端输出日志示例
 
