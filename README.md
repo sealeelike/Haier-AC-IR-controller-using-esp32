@@ -1,6 +1,6 @@
 # ESP32 Wi-Fi Config Portal (MicroPython Edition)
 
-让一块刷了 **MicroPython** 的 ESP32 “开机自动联网、连不上就开热点、网页填密码再连上”，并把过程信息输出到串口 / OLED。  
+让一块刷了 **MicroPython** 的 ESP32 “开机自动联网、连不上就host热点并启动webserver、通过网页配置密码，并把日志信息输出到串口 / OLED。  
 本仓库包含 4 个核心脚本：
 
 | 文件               | 作用                                                         |
