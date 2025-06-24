@@ -7,3 +7,25 @@
 | NPN三极管 | S8050 | 1 | 用于放大发射信号。（尚未使用） |
 | 电阻 | 各阻值 | 若干 | 未使用 |
 | 连接附件 | 面包板、杜邦线 | 若干 | |
+
+
+esp32具体型号
+```
+>python -m esptool --chip auto -p COM5 chip_id
+esptool.py v4.9.0
+Serial port COM5
+Connecting....
+Detecting chip type... Unsupported detection protocol, switching and trying again...
+Connecting.....
+Detecting chip type... ESP32
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: f0:24:f9:0a:7b:f8
+Uploading stub...
+Running stub...
+Stub running...
+Warning: ESP32 has no Chip ID. Reading MAC instead.
+MAC: f0:24:f9:0a:7b:f8
+Hard resetting via RTS pin...
+```
